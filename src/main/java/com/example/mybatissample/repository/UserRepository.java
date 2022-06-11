@@ -1,6 +1,6 @@
 package com.example.mybatissample.repository;
 
-import com.example.mybatissample.entity.User;
+import com.example.mybatissample.model.User;
 
 import org.apache.ibatis.annotations.Mapper;
 

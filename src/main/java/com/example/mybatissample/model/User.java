@@ -1,4 +1,4 @@
-package com.example.mybatissample.entity;
+package com.example.mybatissample.model;
 
 import java.time.LocalDateTime;
 
