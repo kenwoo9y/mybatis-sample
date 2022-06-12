@@ -14,6 +14,11 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
+    public User saveUser(User user) {
+        return this.userRepository.saveUser(user);
+    }
+
+    @Override
     public Optional<User> findByUserId(String userId) {
         return this.userRepository.findByUserId(userId);
     };
