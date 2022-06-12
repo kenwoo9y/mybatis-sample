@@ -2,11 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.mybatissample.repository.UserRepository">
-    <select id="getUser" parameterType="Java.lang.String" resultMap="userDetails">
+    <select id="findByUserId" parameterType="string" resultMap="userDetails">
         <![CDATA[
-            select * from user where id = #{id}
+            select * from sample_sc.user where id = #{id}
         ]]>
     </select>
+
     <resultMap id="userDetails" type="com.example.mybatissample.model.User">
         <result property="id" column="id" />
         <result property="userName" column="user_name" />
