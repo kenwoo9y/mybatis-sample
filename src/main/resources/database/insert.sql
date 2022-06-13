@@ -1,6 +1,6 @@
 insert into sample_sc.user values(
     '12345',
-    '山田 太郎',
+    'TaroYamada',
     'zaq12wsx',
     'taroyamada@example.com',
     '太郎',
