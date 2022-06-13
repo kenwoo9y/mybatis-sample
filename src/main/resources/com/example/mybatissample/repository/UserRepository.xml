@@ -33,4 +33,10 @@
         <result property="createdTime" column="created_time" />
         <result property="updatedTime" column="updated_time" />
     </resultMap>
+
+    <update id="changePassword" parameterType="com.example.mybatissample.model.User">
+        <![CDATA[
+            update sample_sc.user set password = #{password} where id = #{id}
+        ]]>
+    </update>
 </mapper>

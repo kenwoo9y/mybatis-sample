@@ -11,4 +11,6 @@ public interface UserRepository {
     public User saveUser(User user);
     
     public Optional<User> findByUserId(String userId);
+
+    public void changePassword(User user);
 }

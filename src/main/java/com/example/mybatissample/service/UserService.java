@@ -8,4 +8,6 @@ public interface UserService {
     User saveUser(User user);
     
     Optional<User> findByUserId(String userId);
+
+    void changePassword(User user);
 }

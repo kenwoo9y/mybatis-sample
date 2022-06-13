@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,5 +28,12 @@ public class UserController {
     @GetMapping("/{userId}")
     public ResponseEntity<?> findByUserId(@PathVariable("userId") String userId) {
         return new ResponseEntity<>(userService.findByUserId(userId), HttpStatus.OK);
+    }
+
+    @PutMapping("/change")
+    public ResponseEntity<?> changePassword(@RequestBody User user) {
+        userService.changePassword(user);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
