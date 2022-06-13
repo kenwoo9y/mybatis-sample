@@ -29,4 +29,10 @@ public class UserServiceImpl implements UserService {
     public void changePassword(User user) {
         this.userRepository.changePassword(user);
     }
+
+    @Override
+    @Transactional
+    public void deleteUser(String userId) {
+        this.userRepository.deleteUser(userId);
+    }
 }

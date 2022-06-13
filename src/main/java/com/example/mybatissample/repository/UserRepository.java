@@ -13,4 +13,6 @@ public interface UserRepository {
     public Optional<User> findByUserId(String userId);
 
     public void changePassword(User user);
+
+    public void deleteUser(String userId);
 }

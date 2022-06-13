@@ -10,4 +10,6 @@ public interface UserService {
     Optional<User> findByUserId(String userId);
 
     void changePassword(User user);
+
+    void deleteUser(String userId);
 }

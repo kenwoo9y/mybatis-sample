@@ -39,4 +39,10 @@
             update sample_sc.user set password = #{password} where id = #{id}
         ]]>
     </update>
+
+    <delete id="deleteUser" parameterType="string">
+        <![CDATA[
+            delete from sample_sc.user where id = #{id}
+        ]]>
+    </delete>
 </mapper>
