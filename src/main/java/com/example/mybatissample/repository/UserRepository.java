@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserRepository {
-    public User saveUser(User user);
+    public void saveUser(User user);
     
     public Optional<User> findByUserId(String userId);
 
