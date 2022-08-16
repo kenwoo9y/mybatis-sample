@@ -7,7 +7,7 @@
 `curl http://localhost:8080/api/user/1`
 
 ### Update
-`curl -XPUT -H "Content-Type: application/json" -d '{ "id":"1", "password":"abc1234" }' http://localhost:8080/api/user/change`
+`curl -XPUT -H "Content-Type: application/json" -d '{ "password":"abc1234" }' http://localhost:8080/api/user/update/1`
 
 ### Delete
 `curl -XDELETE  http://localhost:8080/api/user/delete/1`
