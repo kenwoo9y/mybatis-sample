@@ -15,24 +15,24 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public void saveUser(User user) {
-        this.userRepository.saveUser(user);
+    public void save(User user) {
+        this.userRepository.save(user);
     }
 
     @Override
-    public Optional<User> findByUserId(String userId) {
-        return this.userRepository.findByUserId(userId);
+    public Optional<User> findById(Long userId) {
+        return this.userRepository.findById(userId);
     };
 
     @Override
     @Transactional
-    public void changePassword(User user) {
-        this.userRepository.changePassword(user);
+    public void updatePassword(User user) {
+        this.userRepository.updatePassword(user);
     }
 
     @Override
     @Transactional
-    public void deleteUser(String userId) {
-        this.userRepository.deleteUser(userId);
+    public void deleteById(Long userId) {
+        this.userRepository.deleteById(userId);
     }
 }

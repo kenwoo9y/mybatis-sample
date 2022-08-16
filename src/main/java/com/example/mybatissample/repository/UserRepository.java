@@ -8,11 +8,11 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserRepository {
-    public void saveUser(User user);
+    public void save(User user);
     
-    public Optional<User> findByUserId(String userId);
+    public Optional<User> findById(Long userId);
 
-    public void changePassword(User user);
+    public void updatePassword(User user);
 
-    public void deleteUser(String userId);
+    public void deleteById(Long userId);
 }

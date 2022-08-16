@@ -5,11 +5,11 @@ import java.util.Optional;
 import com.example.mybatissample.model.User;
 
 public interface UserService {
-    void saveUser(User user);
+    void save(User user);
     
-    Optional<User> findByUserId(String userId);
+    Optional<User> findById(Long userId);
 
-    void changePassword(User user);
+    void updatePassword(User user);
 
-    void deleteUser(String userId);
+    void deleteById(Long userId);
 }
