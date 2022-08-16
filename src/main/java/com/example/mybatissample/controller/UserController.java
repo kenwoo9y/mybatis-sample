@@ -33,8 +33,9 @@ public class UserController {
         return new ResponseEntity<>(userService.findById(userId), HttpStatus.OK);
     }
 
-    @PutMapping("/change")
-    public ResponseEntity<?> updatePassword(@RequestBody User user) {
+    @PutMapping("/update/{userId}")
+    public ResponseEntity<?> updatePassword(@PathVariable("userId") Long userId, @RequestBody User user) {
+        user.setId(userId);
         userService.updatePassword(user);
 
         return new ResponseEntity<>(HttpStatus.OK);
