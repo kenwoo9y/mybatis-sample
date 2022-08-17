@@ -1,5 +1,6 @@
 package com.example.mybatissample.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.example.mybatissample.model.User;
@@ -11,6 +12,8 @@ public interface UserRepository {
     public void save(User user);
     
     public Optional<User> findById(Long userId);
+
+    public List<User> findAll();
 
     public void updatePassword(User user);
 

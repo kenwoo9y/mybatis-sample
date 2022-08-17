@@ -1,5 +1,6 @@
 package com.example.mybatissample.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.example.mybatissample.model.User;
@@ -23,6 +24,11 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findById(Long userId) {
         return this.userRepository.findById(userId);
     };
+
+    @Override
+    public List<User> findAll() {
+        return this.userRepository.findAll();
+    }
 
     @Override
     @Transactional

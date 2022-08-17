@@ -22,6 +22,12 @@
         ]]>
     </select>
 
+    <select id="findAll" resultMap="userDetails">
+        <![CDATA[
+            select * from sample_sc.user
+        ]]>
+    </select>
+
     <resultMap id="userDetails" type="com.example.mybatissample.model.User">
         <result property="id" column="id" />
         <result property="userName" column="user_name" />

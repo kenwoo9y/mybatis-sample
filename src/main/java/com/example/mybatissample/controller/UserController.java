@@ -33,6 +33,11 @@ public class UserController {
         return new ResponseEntity<>(userService.findById(userId), HttpStatus.OK);
     }
 
+    @GetMapping
+    public ResponseEntity<?> findAll() {
+        return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
+    }
+
     @PutMapping("/update/{userId}")
     public ResponseEntity<?> updatePassword(@PathVariable("userId") Long userId, @RequestBody User user) {
         user.setId(userId);
