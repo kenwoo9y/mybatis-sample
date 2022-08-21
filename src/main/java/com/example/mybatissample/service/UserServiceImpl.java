@@ -1,5 +1,6 @@
 package com.example.mybatissample.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
+        user.setCreatedTime(LocalDateTime.now());
+        user.setUpdatedTime(LocalDateTime.now());
+        
         this.userRepository.save(user);
     }
 
@@ -33,6 +37,8 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void updatePassword(User user) {
+        user.setUpdatedTime(LocalDateTime.now());
+        
         this.userRepository.updatePassword(user);
     }
 

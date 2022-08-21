@@ -10,8 +10,8 @@
                 #{email},
                 #{firstName},
                 #{lastName},
-                current_timestamp,
-                current_timestamp
+                #{createdTime},
+                #{updatedTime}
             )
         ]]>
     </insert>
@@ -41,7 +41,7 @@
 
     <update id="updatePassword" parameterType="com.example.mybatissample.model.User">
         <![CDATA[
-            update sample_sc.users set password = #{password} where id = #{id}
+            update sample_sc.users set password = #{password}, updated_time = #{updatedTime} where id = #{id}
         ]]>
     </update>
 
