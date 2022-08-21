@@ -4,7 +4,7 @@
 <mapper namespace="com.example.mybatissample.repository.UserRepository">
     <insert id="save" parameterType="com.example.mybatissample.model.User" useGeneratedKeys="true" keyProperty="id">
         <![CDATA[
-            insert into sample_sc.user (user_name, password, email, first_name, last_name, created_time, updated_time) values(
+            insert into sample_sc.users (user_name, password, email, first_name, last_name, created_time, updated_time) values(
                 #{userName},
                 #{password},
                 #{email},
@@ -18,13 +18,13 @@
 
     <select id="findById" parameterType="java.lang.Long" resultMap="userDetails">
         <![CDATA[
-            select * from sample_sc.user where id = #{id}
+            select * from sample_sc.users where id = #{id}
         ]]>
     </select>
 
     <select id="findAll" resultMap="userDetails">
         <![CDATA[
-            select * from sample_sc.user
+            select * from sample_sc.users
         ]]>
     </select>
 
@@ -41,13 +41,13 @@
 
     <update id="updatePassword" parameterType="com.example.mybatissample.model.User">
         <![CDATA[
-            update sample_sc.user set password = #{password} where id = #{id}
+            update sample_sc.users set password = #{password} where id = #{id}
         ]]>
     </update>
 
     <delete id="deleteById" parameterType="java.lang.Long">
         <![CDATA[
-            delete from sample_sc.user where id = #{id}
+            delete from sample_sc.users where id = #{id}
         ]]>
     </delete>
 </mapper>
